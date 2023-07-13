@@ -4,5 +4,5 @@ services:
     autoconfigure: true
     public: false
 
-  Reelworx\RxShariff\Controller:
+  Reelworx\RxShariff\Controller\:
     resource: '../Classes/Controller/*'
