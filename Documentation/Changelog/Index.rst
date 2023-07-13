@@ -4,6 +4,12 @@
 Change Log
 ==========
 
+Version 15.0.5
+--------------
+
+* Added missing Services.yaml, which makes the plugin working again
+
+
 Version 15.0.4
 --------------
 
