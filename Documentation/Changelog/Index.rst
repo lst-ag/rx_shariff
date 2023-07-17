@@ -4,6 +4,12 @@
 Change Log
 ==========
 
+Version 15.0.6
+--------------
+
+* Fix: Avoids using UriBuilder. Uses standard typolink now.
+
+
 Version 15.0.5
 --------------
 
