@@ -14,6 +14,7 @@ declare(strict_types=1);
 
 namespace Reelworx\RxShariff\ViewHelper;
 
+use Psr\Http\Message\ServerRequestInterface;
 use Reelworx\RxShariff\Controller\ShariffController;
 use TYPO3\CMS\Core\Site\Entity\SiteLanguage;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
@@ -59,16 +60,17 @@ class ShariffViewHelper extends AbstractTagBasedViewHelper
             '["' . implode('","', $services) . '"]'
         );
 
-        $sys_language_isocode = 0;
-        /** @var SiteLanguage $language */
-        $language = $GLOBALS['TYPO3_REQUEST']->getAttribute('language');
-        if ($language instanceof SiteLanguage) {
-            if (is_string($language->getLocale())) {
-                // v11
-                $sys_language_isocode = $language->getTwoLetterIsoCode();
-            } else {
-                // v12
-                $sys_language_isocode = $language->getLocale()->getLanguageCode();
+        $sys_language_isocode = '';
+        if ($GLOBALS['TYPO3_REQUEST'] instanceof ServerRequestInterface) {
+            $language = $GLOBALS['TYPO3_REQUEST']->getAttribute('language');
+            if ($language instanceof SiteLanguage) {
+                if (is_string($language->getLocale())) {
+                    // v11
+                    $sys_language_isocode = $language->getTwoLetterIsoCode();
+                } else {
+                    // v12
+                    $sys_language_isocode = $language->getLocale()->getLanguageCode();
+                }
             }
         }
 
