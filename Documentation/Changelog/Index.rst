@@ -4,6 +4,12 @@
 Change Log
 ==========
 
+Version 15.0.7
+--------------
+
+* Fix: Do not set language in viewhelper if no TYPO3 request object is present
+
+
 Version 15.0.6
 --------------
 
