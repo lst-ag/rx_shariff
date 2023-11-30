@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xliff version="1.0" xmlns="urn:oasis:names:tc:xliff:document:1.1">
-	<file source-language="en" datatype="plaintext" original="EXT:rx_shariff/Resources/Private/Language/locallang_be.xlf" date="2018-02-01T23:04:21Z" product-name="rx_shariff">
+<xliff version="1.2" xmlns:t3="http://typo3.org/schemas/xliff" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" original="EXT:rx_shariff/Resources/Private/Language/locallang_be.xlf" datatype="plaintext" product-name="rx_shariff" date="2023-11-30T10:48:38+01:00">
 		<body>
 			<trans-unit id="flexforms_general.enabledBackend" resname="flexforms_general.enabledBackend">
 				<source>Enable Shariff Backend (Show share count)</source>
@@ -12,7 +12,7 @@
 				<source>Flattr user</source>
 			</trans-unit>
 			<trans-unit id="flexforms_general.lang" resname="flexforms_general.lang">
-				<source>Language (ISO-2 code or 'auto')</source>
+				<source>Language (ISO-2 code or &#39;auto&#39;)</source>
 			</trans-unit>
 			<trans-unit id="flexforms_general.mail.mail-body" resname="flexforms_general.mail.mail-body">
 				<source>Bodytext (empty for auto generated content)</source>
@@ -21,8 +21,7 @@
 				<source>Subject (empty for auto generated content)</source>
 			</trans-unit>
 			<trans-unit id="flexforms_general.mail.mail-url" resname="flexforms_general.mail.mail-url">
-				<source>Mail-URL, the URL target used for the mail service button (defaults to &quot;mailto:&quot;)
-				</source>
+				<source>Mail-URL, the URL target used for the mail service button (defaults to &#34;mailto:&#34;)</source>
 			</trans-unit>
 			<trans-unit id="flexforms_general.orientation" resname="flexforms_general.orientation">
 				<source>Orientation</source>
@@ -121,7 +120,7 @@
 				<source>Title to be used as share text (empty for auto generated content)</source>
 			</trans-unit>
 			<trans-unit id="flexforms_general.twittername" resname="flexforms_general.twittername">
-				<source>Twitter name (for &quot;via&quot;)</source>
+				<source>Twitter name (for &#34;via&#34;)</source>
 			</trans-unit>
 			<trans-unit id="flexforms_general.url" resname="flexforms_general.url">
 				<source>The canonical URL of the page to share. (empty for current URL)</source>
