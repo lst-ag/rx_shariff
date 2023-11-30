@@ -164,7 +164,7 @@
 			</trans-unit>
 			<trans-unit id="flexforms_general.url" resname="flexforms_general.url">
 				<source>The canonical URL of the page to share. (empty for current URL)</source>
-				<target>Die kanonisch URL der zu teilenden Seite. (leer für aktuelle URL)</target>
+				<target>Die kanonische URL der zu teilenden Seite. (leer für aktuelle URL)</target>
 			</trans-unit>
 			<trans-unit id="flexforms_tab.flattr" resname="flexforms_tab.flattr">
 				<source>Flattr</source>
