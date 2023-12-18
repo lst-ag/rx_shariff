@@ -57,7 +57,7 @@ class ShariffViewHelper extends AbstractTagBasedViewHelper
         }
         $this->tag->addAttribute(
             'data-services',
-            '["' . implode('","', $services) . '"]'
+            "['" . implode("','", $services) . "']"
         );
 
         $sys_language_isocode = '';
