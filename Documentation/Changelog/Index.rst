@@ -4,6 +4,12 @@
 Change Log
 ==========
 
+Version 15.1.1
+--------------
+
+* Fix: Allow PHP 8.3 in ext_emconf as well
+
+
 Version 15.1.0
 --------------
 
