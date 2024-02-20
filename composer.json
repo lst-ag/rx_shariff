@@ -16,7 +16,7 @@
 		"issues": "https://bitbucket.org/reelworx/rx_shariff/issues"
 	},
 	"require": {
-		"php": ">=8.0 <8.3",
+		"php": ">=8.0 <8.4",
 		"typo3/cms-core": "^11.5 | ^12.2"
 	},
 	"autoload": {
