@@ -4,6 +4,12 @@
 Change Log
 ==========
 
+Version 15.1.2
+--------------
+
+* Fix: Properly include TS in TYPO3 v12
+
+
 Version 15.1.1
 --------------
 
