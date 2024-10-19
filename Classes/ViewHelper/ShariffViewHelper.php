@@ -18,6 +18,7 @@ use Psr\Http\Message\ServerRequestInterface;
 use Reelworx\RxShariff\Controller\ShariffController;
 use TYPO3\CMS\Core\Site\Entity\SiteLanguage;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Fluid\Core\Rendering\RenderingContext;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper;
 
@@ -28,7 +29,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper;
  */
 class ShariffViewHelper extends AbstractTagBasedViewHelper
 {
-    public function initializeArguments()
+    public function initializeArguments(): void
     {
         parent::initializeArguments();
         $this->registerUniversalTagAttributes();
@@ -36,7 +37,7 @@ class ShariffViewHelper extends AbstractTagBasedViewHelper
         $this->registerArgument('enableBackend', 'boolean', 'Enable the Shariff Backend module and show stats', false, false);
     }
 
-    public function render()
+    public function render(): string
     {
         if ($this->arguments['enableBackend']) {
             $contentObjectRenderer = GeneralUtility::makeInstance(ContentObjectRenderer::class);
@@ -61,14 +62,24 @@ class ShariffViewHelper extends AbstractTagBasedViewHelper
         );
 
         $sys_language_isocode = '';
-        if ($GLOBALS['TYPO3_REQUEST'] instanceof ServerRequestInterface) {
-            $language = $GLOBALS['TYPO3_REQUEST']->getAttribute('language');
+        if ($this->renderingContext instanceof RenderingContext) {
+            if ($this->renderingContext->hasAttribute(ServerRequestInterface::class)) {
+                // v13
+                $request = $this->renderingContext->getAttribute(ServerRequestInterface::class);
+            } else {
+                $request = $this->renderingContext->getRequest();
+            }
+        } else {
+            $request = $GLOBALS['TYPO3_REQUEST'];
+        }
+        if ($request instanceof ServerRequestInterface) {
+            $language = $request->getAttribute('language');
             if ($language instanceof SiteLanguage) {
                 if (is_string($language->getLocale())) {
                     // v11
                     $sys_language_isocode = $language->getTwoLetterIsoCode();
                 } else {
-                    // v12
+                    // v12+
                     $sys_language_isocode = $language->getLocale()->getLanguageCode();
                 }
             }
