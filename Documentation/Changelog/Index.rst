@@ -4,6 +4,13 @@
 Change Log
 ==========
 
+Version 15.2.0
+--------------
+
+* Added support for TYPO3 v13
+* Migrated documentation rendering
+
+
 Version 15.1.2
 --------------
 
