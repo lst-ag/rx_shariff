@@ -123,7 +123,7 @@ Finding the logs
 ^^^^^^^^^^^^^^^^
 
 The extension uses the TYPO3 logging facility to log warnings when fetching counts from the various social media platforms.
-If you encounter problems, take a look into the logs usually located in the ``typo3temp`` folder.
+If you encounter problems, take a look into the logs, usually located in the ``var/log/`` folder.
 
 
 Predefining plugin options
@@ -156,7 +156,7 @@ The default settings provided by the extension are:
 
 
 Override those settings for your needs and hide the fields in the plugin configuration accordingly.
-Use default ``TCEFORM`` page TSconfig settings to achieve this. Take a look into the :ref:`TSconfig reference <t3tsconfig:tceform>`.
+Use default ``TCEFORM`` page TSconfig settings to achieve this. Take a look into the :ref:`Page TSconfig Reference <t3tsconfig:pagetoplevelobjects>`.
 
 Examples:
 
