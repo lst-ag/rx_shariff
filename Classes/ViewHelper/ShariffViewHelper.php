@@ -63,7 +63,7 @@ class ShariffViewHelper extends AbstractTagBasedViewHelper
 
         $sys_language_isocode = '';
         if ($this->renderingContext instanceof RenderingContext) {
-            if ($this->renderingContext->hasAttribute(ServerRequestInterface::class)) {
+            if (method_exists($this->renderingContext, 'hasAttribute') && $this->renderingContext->hasAttribute(ServerRequestInterface::class)) {
                 // v13
                 $request = $this->renderingContext->getAttribute(ServerRequestInterface::class);
             } else {
