@@ -4,6 +4,12 @@
 Change Log
 ==========
 
+Version 15.2.1
+--------------
+
+* Fixed TYPO3 v11 support (#36)
+
+
 Version 15.2.0
 --------------
 

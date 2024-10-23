@@ -10,5 +10,5 @@
       project-repository="https://bitbucket.org/reelworx/rx_shariff/"
       project-issues="https://bitbucket.org/reelworx/rx_shariff/issues"
       typo3-core-preferred="stable"/>
-  <project title="Heise Shariff" release="15.2.0" copyright="Copyright 2015-2024 by Reelworx GmbH"/>
+  <project title="Heise Shariff" release="15.2.1" copyright="Copyright 2015-2024 by Reelworx GmbH"/>
 </guides>
